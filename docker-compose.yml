@@ -1,0 +1,16 @@
+#docker-compose.yml
+version: "2"
+
+#dev
+services:
+  ehr-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: diagnoss_frontend
+    ports:
+      - '3000:3000'
+    volumes:
+      - $PWD/:/diagnoss_frontend/
+    tty: true
+    command: npm run start
