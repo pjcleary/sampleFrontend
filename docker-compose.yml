@@ -7,10 +7,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: diagnoss_frontend
+    container_name: sample_frontend
     ports:
       - '3000:3000'
     volumes:
-      - $PWD/:/diagnoss_frontend/
+      - $PWD/:/sample_frontend/
     tty: true
     command: npm run start
